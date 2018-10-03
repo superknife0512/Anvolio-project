@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Bentham|Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet">
+    <title>Anvolio Spa</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <div id="app">
+        
+
+        <section class="hero-area">
+            <header class="header">
+                <div class="header__left">
+                    <img src="img/logo-white .png" alt="logo" class="header__logo">
+                </div>
+                <div class="header__right">
+                    <div class="header__responsive">
+                        <i class="fas fa-bars" class="header__responsive--icon"
+                            @click="isActive = !isActive"></i>
+                    </div>
+                    <ul class="header__menu fade" :class="{display: isActive}">
+                        <li class="header__menu--item"> <a href="#" class="header__menu--link">
+                                Home</a>
+                        </li>
+                        <li class="header__menu--item"> <a href="#" class="header__menu--link">
+                                Therapy</a>
+                        </li>
+                        <li class="header__menu--item"> <a href="#" class="header__menu--link">
+                                Our Specialist</a>
+                        </li>
+                        <li class="header__menu--item"> <a href="#" class="header__menu--link">
+                                About Us
+                            </a> </li>
+                        <li class="header__menu--item"> <a href="#" class="header__menu--link">
+                                Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+
+            <div class="hero-content">
+                <h4 class="content__1 mb-xs">Let's refill your energy with us</h4>
+                <h1 class="heading-1 light-color mb-md">welcome to our salon</h1>
+                <h5 class="content__2 mb-sm">Our customer never regret with their choice.</h5>
+                <a href="#" class="CTA__1">Enjoy our service</a>
+            </div>
+        </section>
+
+        <section class="benefit" id="benefit">
+            <div class="benefit__area">
+                <img src="img/the1.jpeg" alt="benefit 1" class="benefit__img benefit__img--1">
+                <img src="img/the2.jpeg" alt="benefit 2" class="benefit__img benefit__img--2">
+                <img src="img/the3.jpeg" alt="benefit 3" class="benefit__img benefit__img--3">
+                <div class="benefit__card benefit__card--1">
+                    <h3 class="heading-3 mb-xs">Contact Us</h3>
+                    <p class="content__3 align-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id
+                        augue nisi. Sed facilisis lorem porta sed. Praesent elit est, consequat eu pretium id, mollis
+                        quis quam. </p>
+                    <a href="#" class="CTA__2">Learn more</a>
+                </div>
+                <div class="benefit__card benefit__card--2">
+                    <h3 class="heading-3 mb-xs align-center">Book message</h3>
+                    <p class="content__3 align-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id
+                        augue nisi. Sed facilisis lorem porta sed. Praesent elit est. </p>
+                    <a href="#" class="CTA__2">Learn more</a>
+                </div>
+                <div class="benefit__card benefit__card--3">
+                    <h3 class="heading-3 mb-xs">our specialist</h3>
+                    <p class="content__3 align-center">Quisque rhoncus ultricies elit, sed facilisis lorem porta sed.
+                        Praesent elit est, consequat eu pretium id, mollis quis quam. </p>
+                    <a href="#" class="CTA__2">Learn more</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="philosophy" id="philosophy">
+            <div class="philosophy-img--1">
+                <h5 class="content__4">
+                    Healing your fatique muscle
+                </h5>
+                <h2 class="heading-2">
+                    message therapy
+                </h2>
+            </div>
+            <div class="philosophy-img--2">
+                <h5 class="content__4">
+                    Enjoy our best service
+                </h5>
+                <h2 class="heading-2">
+                    phisyotherapy
+                </h2>
+
+            </div>
+            <div class="philosophy-img--3">
+                <h5 class="content__4">
+                    Boost your mentality
+                </h5>
+                <h2 class="heading-2">
+                    chiropratic
+                </h2>
+
+            </div>
+        </section>
+
+        <section id="expert">
+            <div class="title mb-hg">
+                <p class="content__4 primary-color">
+                    Make your desicion
+                </p>
+                <h2 class="heading-2 dark-color mb-xs">
+                    meet our experts
+                </h2>
+                <img src="img/divider.png" alt="devider" class="title__divider">
+            </div>
+            <div class="expert__list">
+                <div class="expert__card mb-md" v-for="expert in experts">
+
+                    <figure class="expert__img-cap">
+
+                        <img :src="expert.img" :alt="expert.name" class="expert__img">
+
+                        <figcaption href="#" class="expert__letter">
+                            <i class="fas fa-envelope expert__letter-icon"></i>
+                        </figcaption>
+
+                    </figure>
+
+                    <h4 class="expert__name">
+                        {{ expert.name }}
+                    </h4>
+                    <p class="expert__specialty">
+                        {{ expert.specialty }}
+                    </p>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <div class="title mb-hg">
+                <p class="content__4 light-color">
+                    Revise your feeling
+                </p>
+                <h2 class="heading-2 light-color mb-xs">
+                    what people say about us
+                </h2>
+                <img src="img/divider.png" alt="devider" class="title__divider">
+            </div>
+
+            <div class="testimonial__section fade" id="1" v-for="test in testimonials">
+                <span class="testimonial__quote">&quot;</span>
+                <blockquote class="content__3 light-color align-center">
+                    {{ test.quote }}
+                </blockquote>
+                <div class="testimonial__person">
+                    <img :src="test.img" :alt="test.name" class="testimonial__img">
+                    <h3 class="heading-3 light-color ">{{test.name}}</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="statics">
+            <div class="static" v-for='static in statics'>
+                <img :src="static.img" :alt="static.name" class="static__icon">
+                <h2 class="static__number">{{ static.number }}</h2>
+                <p class="static__name">{{ static.name }}</p>
+            </div>
+        </section>
+
+        <section id="price">
+            <div class="title mb-hg">
+                <p class="content__4 primary-color">
+                    Ladies and gentlements
+                </p>
+                <h2 class="heading-2 dark-color mb-xs">
+                    special pricing
+                </h2>
+                <img src="img/divider.png" alt="devider" class="title__divider">
+            </div>
+            <div class="price__section mb-md">
+                <div class="price__each" v-for="price in prices" :id="price.id">
+                    <div :class="price.id">
+                        <h4 class="price__heading">{{price.heading}}</h4>
+                        <p class="price__detail">{{price.detail}}</p>
+                        <!-- <span class="promotion--hot">Hot service</span> -->
+                        <!-- <span class="promotion--popular">popular service</span> -->
+                    </div>
+                    <p class="price__label">{{price.label}}</p>
+                </div>
+            </div>
+
+            <a href="#" class="CTA__2 btn--primary">Learn more</a>
+        </section>
+
+        <section id="services">
+            <div class="service" v-for='service in services'>
+                <img :src="service.img" :alt="service.heading" class="service__img">
+
+                <div class="service__icon">
+                    <a href="#" class="service__link">
+                        <i class="fas fa-search service__link--icon"></i>
+                    </a>
+                    <a href="#" class="service__link">
+                        <i class="fas fa-magic service__link--icon"></i>
+                    </a>
+                </div>
+                <div class="service__info">
+                    <div class="service__heading">
+                        {{service.heading}}
+                    </div>
+                    <div class="service__detail">
+                        {{service.detail}}
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="product-use">
+
+            <div class="product-use__left ">
+                <div class="title d-flex-start mb-md">
+                    <p class="content__4 primary-color">
+                        Take care yourself
+                    </p>
+                    <h2 class="heading-2 dark-color mb-xs">
+                        Product we use
+                    </h2>
+                </div>
+
+                <p class="content__3 mb-md">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales vitae purus vitae
+                    consectetur. Nam id mi tempus, vulputate felis quis, viverra leo. Sed ut nisl ligula. Aliquam
+                    imperdiet lectus nec justo tempus ornare. Quisque in arcu est. Donec at quam at metus finibus
+                    consequat.
+                </p>
+
+                <div class="product-use__steps mb-md">
+
+                    <div class="product-use__step" v-for="step in steps">
+                        <p class="product-use__step--number">{{step.number}}</p>
+                        <p class="product-use__step--name">{{step.name}}</p>
+                        <p class="product-use__step--detail">{{step.detail}}</p>
+                    </div>
+
+                </div>
+                <a href="#" class="CTA__2">
+                    Learn more
+                </a>
+            </div>
+
+            <div class="product-use__right">
+                <img src="img/spaProduct.jpeg" alt="spa" class="product-use__right--img">
+            </div>
+
+        </section>
+
+        <section id="CTA">
+            <div class="CTA__wrapper">
+                <h2 class="heading-2 mb-xs">don't waste your time in other boring spa</h2>
+                <p class="content__3 light-color mb-sm">Let's see what we can do for you! register now!</p>
+                <form action="#" class="CTA__form-group">
+                    <input type="email" name="email" class="CTA__form" placeholder="Your email">
+                    <input type="submit" class="CTA__btn">
+                </form>
+            </div>
+        </section>
+
+        <footer id='footer'>
+            <div class="footer__wrapper">
+                <img src="img/logo-white .png" alt="logo" class="footer__logo">
+                <div class="footer__contact">
+                    <h3 class="heading-3 light-color mb-sm">
+                        contact
+                    </h3>
+                    <div class="footer__contact-info">
+                        <i class="fas fa-user footer__contact-icon"></i>
+                        <p class="content__2">I'm Toan, a web developer</p>
+                    </div>
+                    <div class="footer__contact-info">
+                        <i class="fas fa-envelope footer__contact-icon"></i>
+                        <p class="content__2">Email: phanhuutoan9X@gmail.com</p>
+                    </div>
+                    <div class="footer__contact-info">
+                        <i class="fas fa-phone footer__contact-icon"></i>
+                        <p class="content__2 primary-color">Phone: (+84) 0128-275-9831</p>
+                    </div>
+                </div>
+                <div class="footer__project">
+                    <h3 class="heading-3 light-color mb-sm">
+                        Here's my other projects. Let's see
+                    </h3>
+                    <div class="footer__project-wrapper">
+                        <a href="http://superknife0512.github.io/Bakerfarm-project" 
+                            class="footer__project-link"
+                            target="blank">
+                            Bakerfarm project
+                        </a>
+                        <p class="content__3 light-color">
+                            A web template for an restaurant
+                        </p>
+                    </div>
+
+                    <div class="footer__project-wrapper">
+                        <a href="http://superknife0512.github.io/Nexter-project" 
+                            class="footer__project-link"
+                            target="blank">
+                            Nexter-project
+                        </a>
+                        <p class="content__3 light-color">
+                            A web template for a real estate company
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <div class="modal fade" v-if="modalActive">
+                <div class="modal__wrapper" >
+                    <i class="fas fa-times modal__icon" @click="modalActive = false"></i>
+                    <h2 class="heading-2 dark-color mb-xs">Read before enter our page!</h2>
+                    <p class="content__2 dark-color mb-md">Please update your browser to the latest version due to your best experience on our page</p>
+                    <a href="https://browser-update.org/update.html"
+                       class="CTA__1"
+                       target="blank">Help me update!</a>
+                </div>
+            </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

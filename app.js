@@ -48,22 +48,22 @@ new Vue({
 
         statics: [
             {
-                img: '../img/sta1.png',
+                img: 'img/sta1.png',
                 number: 2314,
                 name: 'Sastified Customers'
             },
             {
-                img: '../img/sta2.png',
+                img: 'img/sta2.png',
                 number: 35,
                 name: 'outstanding services'
             },
             {
-                img: '../img/sta3.png',
+                img: 'img/sta3.png',
                 number: 429,
                 name: 'awesome methods'
             },
             {
-                img: '../img/sta4.png',
+                img: 'img/sta4.png',
                 number: 16,
                 name: 'Experts'
             }
@@ -122,22 +122,22 @@ new Vue({
 
         services: [
             {
-                img:'../img/ser1.jpg',
+                img:'img/ser1.jpg',
                 heading: 'Hot stone service',
                 detail: 'the most popuplar services'
             },
             {
-                img:'../img/ser2.jpg',
+                img:'img/ser2.jpg',
                 heading: 'Medical Bath treatment',
                 detail: 'Healing your skin'
             },
             {
-                img:'../img/ser3.jpg',
+                img:'img/ser3.jpg',
                 heading: 'Body massage',
                 detail: 'Increase your health'
             },
             {
-                img:'../img/ser4.jpg',
+                img:'img/ser4.jpg',
                 heading: 'Meditate de-stress',
                 detail: 'Keep your mentality up'
             },

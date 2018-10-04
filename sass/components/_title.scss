@@ -1,0 +1,10 @@
+
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    &__divider{
+        height: 2.5rem;
+    }
+}

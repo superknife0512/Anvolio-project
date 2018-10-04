@@ -1,0 +1,87 @@
+.service{
+    position: relative;
+    overflow: hidden;
+
+    &__img{
+        width: 100%;
+        transition: all .2s ease-in;
+    }
+    
+    &__icon{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transition: all .3s .2s ease-in;
+        //for effect
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(-50%, -50%) scale(1.2);
+
+    }
+
+    &__link{
+        
+        &:not(:last-child){
+            margin-right: 2rem;
+        }
+
+        &:link, &:visited{
+            text-decoration: none;
+        }
+
+        &--icon{
+            color: $color-primary;
+            transition: all .2s;
+        }
+
+        
+        &:hover &--icon{
+            transform: translateY(-.8rem);
+        }
+    }
+
+    &__info{
+        background-color: #444;
+        text-align: center;
+        padding: 1.5rem 0;
+        position: absolute;
+        bottom: .6rem;
+        left: 0;
+        width: 100%;
+        transition: all .4s .2s ease-in;
+        //for effect 
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(1.2rem);
+
+    }
+    &__heading{
+        font-size: 2.1rem;
+        color: #eee;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+    &__detail{
+        color: #eee;
+        font-size: 1.4rem;
+    }   
+}
+
+.service:hover .service__img {        
+    //for hover action
+    filter: blur(1px) brightness(50%);
+}
+
+.service:hover .service__icon{
+
+    opacity: 1;
+    visibility: visible;        
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.service:hover .service__info{
+
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}

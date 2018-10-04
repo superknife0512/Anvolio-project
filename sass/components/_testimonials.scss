@@ -1,0 +1,35 @@
+
+.testimonial{
+
+    &__section{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    &__person{
+        display: flex;
+        align-items: center;        
+        margin-top: 3rem;
+    }
+
+    &__img{
+        height: 7rem;
+        border-radius: 50%;
+        margin-right: 2rem;
+    }
+
+    &__quote{
+        // font-family: $font-display;
+        font-size: 8rem;
+        color: white;
+        position: absolute;
+        top: -5.6rem;
+        left: -3rem;
+        opacity: .8;
+    }
+}

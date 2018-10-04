@@ -1,0 +1,40 @@
+
+.mb-hg{ margin-bottom: 8rem !important}
+.mb-big{ margin-bottom:6rem !important}
+.mb-md{ margin-bottom: 3rem !important}
+.mb-sm{ margin-bottom: 2rem !important}
+.mb-xs{ margin-bottom: 1rem !important}
+
+//align text 
+
+.align-right{ text-align: right}
+.align-left{ text-align: left}
+.align-center{ text-align: center}
+
+// text color 
+
+.light-color{color: white !important}
+.dark-color{color: #444 !important}
+.primary-color{color: $color-primary !important}
+
+//change btn-background: 
+.btn--primary{ 
+    background-color: $color-primary !important;
+    align-self: center;
+    }
+
+//flex
+
+.d-flex-start{
+    
+    align-items: flex-start !important;
+    @include responsive($xs){
+        align-items: center !important;
+    }
+}
+
+//display 
+.display{
+    display: flex !important;
+}
+

@@ -1,0 +1,78 @@
+
+%btn{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    display: inline-block;
+    overflow: hidden;
+    transition: all .3s;
+}
+
+%beforeBtn {
+    content: "";
+    background-color: white;
+    height: 1.5rem;
+    width: 20rem;
+    position: absolute;
+    left: 0;
+    opacity: .7;
+    transition: all .7s cubic-bezier(.82,.02,.13,1);
+}
+
+.CTA__1{
+
+    position: relative;
+
+    &:link, &:visited{
+        @extend %btn;          
+        padding: 2rem 4rem;        
+        background-color: $color-primary;
+        
+    }
+
+    &::before{
+       @extend %beforeBtn;       
+        transform: rotate(120deg) translateY(11rem);
+    }
+
+    &:hover{
+        background-color: rgb(247, 138, 95);
+        transform: translateY(-1rem);        
+        box-shadow: .2rem .3rem 2rem rgba($color: #000000, $alpha: .3)
+        
+    }
+
+    &:hover::before{
+        transform: rotate(120deg) translateY(-14rem);
+    }
+}
+
+.CTA__2{
+    position: relative;
+
+    &:link, &:visited{
+        @extend %btn;
+        padding: .6rem 1.5rem;
+        background-color: $color-secondary;
+    }
+
+    
+    &::before{
+        @extend %beforeBtn;        
+        transform: rotate(120deg) translateY(11rem);
+     }
+ 
+     &:hover{
+        background-color: #60dab7;
+        transform: translateY(-.5rem);        
+        box-shadow: 0rem .3rem 1rem rgba($color: #000000, $alpha: .3)
+         
+     }
+ 
+     &:hover::before{
+         transform: rotate(120deg) translateY(-4rem);
+     }
+}
+
+
+
